@@ -1,0 +1,3 @@
+Die Datei /wbb2/em2016.php ersetzen.
+Den Inhalt des Templates em2016_topuser im ACP mit dem Inhalt der Datei /wbb2/templates/em2016_topuser.tpl ersetzen.
+OPTIONAL: Die Datei /wbb2/images/top_em2016.gif (Headergrafik) hochladen, wenn gewünscht.

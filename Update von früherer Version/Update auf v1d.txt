@@ -1,0 +1,7 @@
+Die Datei /wbb2/em2016.php ersetzen.
+
+
+Folgende SQL-Befehle ausführen:
+
+ALTER TABLE `bb1_em2016_vortag` ADD `id` int(5) NULL AUTO_INCREMENT UNIQUE FIRST, CHANGE `userid` `userid` int(10) NULL AFTER `id`, CHANGE `pos` `pos` int(10) NOT NULL AFTER `punkte`;
+ALTER TABLE `bb1_em2016_vortag` ADD PRIMARY KEY `id` (`id`), DROP INDEX `PRIMARY`;

@@ -1,0 +1,37 @@
+v1b
+---
+
++ Fixed: Bug, der verhindert, dass Optionen gespeichert werden können
+
+v1c
+---
+
++ Fixed: Wenn User am Vortag noch nichts getippt haben, wird ein Abstiegspfeil angezeigt
++ Fixed: Top-10-User werden im Rang fortlaufend gezählt, auch bei Gleichstand
++ Fixed: Vize-/Europameister tippen nicht möglich
++ Added: Button für den Header (Danke an Fatman!)
+
+v1d
+---
+
++ Besseres Handling von gleichrangigen Nutzern
+
+v1e
+---
+
++ Fixed: Tageswertung Reset hat nicht funktioniert
++ Added: Bessere Weiterleitung nach Abgabe von Tipps
++ Fixed: Mod Threadinklusion hat nicht funktioniert (Ranking fehlte)
++ Anpassungen an HTML5
++ Fixed: Keine Ranking-Anzeige im Thread vor Tippbeginn
+
+v1f
+---
+
++ Added: JGS-Portal Mods
++ Fixed: Weiße Seite bei erstem Aufruf des Tippspiels
+
+v1g
+---
+
++ Fixed: Falsche Sprachvariablen
