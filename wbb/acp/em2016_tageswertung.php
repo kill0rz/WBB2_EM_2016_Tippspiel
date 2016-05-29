@@ -23,7 +23,7 @@ echo "<h2><center>EM-Tippspiel Reset Tageswertung</center></h2>\n<br />\n";
 
 $em2016_options = $db->query_first("SELECT * FROM bb" . $n . "_em2016_options");
 
-$result_topuser = $db->query("SELECT u.username,p.* FROM bb" . $n . "_em2016_userpunkte p LEFT JOIN bb" . $n . "_users u USING (userid) ORDER BY punkte DESC, ((tipps_richtig+tipps_tendenz)/tipps_falsch) DESC,tipps_gesamt DESC  Limit 0,$em2016_options[topuser]");
+$result_topuser = $db->query("SELECT u.username,p.* FROM bb" . $n . "_em2016_userpunkte p LEFT JOIN bb" . $n . "_users u USING (userid) ORDER BY punkte DESC, ((tipps_richtig+tipps_tendenz)/tipps_falsch) DESC,tipps_gesamt DESC  Limit 0,{$em2016_options['topuser']}");
 
 $em2016_rank_merk = 0;
 $em2016_punkte_merk = 0;
@@ -35,7 +35,7 @@ while ($row_topuser = $db->fetch_array($result_topuser)) {
 		$em2016_rank = $em2016_rank_merk;
 		$em2016_punkte_merk = $row_topuser['punkte'];
 	}
-	$db->query("INSERT INTO bb1_em2016_vortag (userid, punkte, pos) VALUES ('" . $row_topuser['userid'] . "', '" . $row_topuser['punkte'] . "', '" . $em2016_rank . "');");
+	$db->query("INSERT INTO bb" . $n . "_em2016_vortag (userid, punkte, pos) VALUES ('" . $row_topuser['userid'] . "', '" . $row_topuser['punkte'] . "', '" . $em2016_rank . "');");
 }
 
 echo "OK";

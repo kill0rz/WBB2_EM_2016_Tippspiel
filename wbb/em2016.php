@@ -53,7 +53,7 @@ if ($em2016_options['lasttageswertungreset'] != date("d")) {
 	$db->query("CREATE TABLE bb" . $n . "_em2016_vortag (userid int(5), punkte int(10), pos int(3) default NULL auto_increment, PRIMARY KEY (pos));");
 	$db->query("ALTER TABLE bb" . $n . "_em2016_vortag ADD `id` int(5) NULL AUTO_INCREMENT UNIQUE FIRST, CHANGE `userid` `userid` int(10) NULL AFTER `id`, CHANGE `pos` `pos` int(10) NOT NULL AFTER `punkte`;");
 	$db->query("ALTER TABLE bb" . $n . "_em2016_vortag ADD PRIMARY KEY `id` (`id`), DROP INDEX `PRIMARY`;");
-	$result_topuser = $db->query("SELECT u.username,p.* FROM bb" . $n . "_em2016_userpunkte p LEFT JOIN bb" . $n . "_users u USING (userid) ORDER BY punkte DESC, ((tipps_richtig+tipps_tendenz)/tipps_falsch) DESC,tipps_gesamt DESC  Limit 0,$em2016_options[topuser]");
+	$result_topuser = $db->query("SELECT u.username,p.* FROM bb" . $n . "_em2016_userpunkte p LEFT JOIN bb" . $n . "_users u USING (userid) ORDER BY punkte DESC, ((tipps_richtig+tipps_tendenz)/tipps_falsch) DESC,tipps_gesamt DESC  Limit 0,{$em2016_options['topuser']}");
 
 	while ($row_topuser = $db->fetch_array($result_topuser)) {
 		//insert values vortag
@@ -62,7 +62,7 @@ if ($em2016_options['lasttageswertungreset'] != date("d")) {
 			$em2016_rank = $em2016_rank_merk;
 			$em2016_punkte_merk = $row_topuser['punkte'];
 		}
-		$db->query("INSERT INTO bb1_em2016_vortag (userid, punkte, pos) VALUES ('" . $row_topuser['userid'] . "', '" . $row_topuser['punkte'] . "', '" . $em2016_rank . "');");
+		$db->query("INSERT INTO bb" . $n . "_em2016_vortag (userid, punkte, pos) VALUES ('" . $row_topuser['userid'] . "', '" . $row_topuser['punkte'] . "', '" . $em2016_rank . "');");
 	}
 
 }
@@ -123,7 +123,7 @@ if ($action == "index") {
 	}
 	// Persönliche Box Ende
 	// Next X Games Anfang
-	$result_nextgames = $db->query("SELECT * FROM bb" . $n . "_em2016_spiele WHERE datetime > '" . intval($akttime) . "' ORDER BY datetime ASC Limit 0,$em2016_options[nextxgames]");
+	$result_nextgames = $db->query("SELECT * FROM bb" . $n . "_em2016_spiele WHERE datetime > '" . intval($akttime) . "' ORDER BY datetime ASC Limit 0,{$em2016_options['nextxgames']}");
 	while ($row_nextgames = $db->fetch_array($result_nextgames)) {
 		$rowclass = getone($count++, "tablea", "tableb");
 		$gamedate = formatdate($wbbuserdata['dateformat'], $row_nextgames['datetime'], 1);
@@ -271,7 +271,7 @@ if ($action == "index") {
 	// Punkteverteilung Ende
 	// Top-X-User Anfang
 	$count = 0;
-	$result_topuser = $db->query("SELECT u.username,p.* FROM bb" . $n . "_em2016_userpunkte p LEFT JOIN bb" . $n . "_users u USING (userid) ORDER BY punkte DESC, ((tipps_richtig+tipps_tendenz)/tipps_falsch) DESC,tipps_gesamt DESC Limit 0,$em2016_options[topuser]");
+	$result_topuser = $db->query("SELECT u.username,p.* FROM bb" . $n . "_em2016_userpunkte p LEFT JOIN bb" . $n . "_users u USING (userid) ORDER BY punkte DESC, ((tipps_richtig+tipps_tendenz)/tipps_falsch) DESC,tipps_gesamt DESC Limit 0,{$em2016_options['topuser']}");
 	while ($row_topuser = $db->fetch_array($result_topuser)) {
 		$rowclass = getone($count++, "tablea", "tableb");
 		//** Ranking Start *//
@@ -823,7 +823,7 @@ if ($action == "tippabgabe_vem") {
 // ++++++++++++++++++++++++
 if ($action == "showusertipps") {
 
-	$result = $db->query("SELECT up.*,uu.username	FROM bb" . $n . "_em2016_userpunkte up 	LEFT JOIN bb" . $n . "_users uu ON up.userid=uu.userid ORDER BY punkte DESC, tipps_gesamt DESC");
+	$result = $db->query("SELECT up.*,uu.username FROM bb" . $n . "_em2016_userpunkte up LEFT JOIN bb" . $n . "_users uu ON up.userid=uu.userid ORDER BY punkte DESC, tipps_gesamt DESC");
 	while ($row = $db->fetch_array($result)) {
 		$rowclass = getone($count++, "tablea", "tableb");
 		if ($row['tipp_em'] == 0) {

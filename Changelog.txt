@@ -35,3 +35,8 @@ v1g
 ---
 
 + Fixed: Falsche Sprachvariablen
+
+v1g
+---
+
++ Fixed: Ein paar kleine Bugs bezüglich Escaping und SQL-Befehle

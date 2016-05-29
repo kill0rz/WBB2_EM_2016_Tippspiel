@@ -1,4 +1,4 @@
-g<?php
+<?php
 /***************************************************************************
  *
  *   MOD                  : WM-2006/2014/EM-2016 Tippspiel
@@ -17,7 +17,7 @@ if (file_exists("./lib/em2016_install.lock")) {
 
 $filename = "em2016_setup.php";
 
-$version = "v1g";
+$version = "v1h";
 
 @error_reporting(7);
 @set_time_limit(0);
