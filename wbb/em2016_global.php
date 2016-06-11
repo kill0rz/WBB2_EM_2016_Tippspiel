@@ -45,6 +45,11 @@ if ($em2016_options['ebay_cat'] != 0) {
 	$ebay_cat = "&CategoryID={$em2016_options['ebay_cat']}";
 }
 
+$replace_datum_komma = array(
+	"<b>Heute</b>," => "<b>Heute</b>",
+	"Gestern," => "Gestern",
+);
+
 eval("\$em2016_ebay = \"" . $tpl->get("em2016_ebay") . "\";");
 eval("\$em2016_header = \"" . $tpl->get("em2016_header") . "\";");
 eval("\$em2016_footer = \"" . $tpl->get("em2016_footer") . "\";");

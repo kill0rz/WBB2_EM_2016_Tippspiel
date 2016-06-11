@@ -127,6 +127,7 @@ if ($action == "index") {
 	while ($row_nextgames = $db->fetch_array($result_nextgames)) {
 		$rowclass = getone($count++, "tablea", "tableb");
 		$gamedate = formatdate($wbbuserdata['dateformat'], $row_nextgames['datetime'], 1);
+		$gamedate = strtr($gamedate, $replace_datum_komma);
 		$gametime = formatdate($wbbuserdata['timeformat'], $row_nextgames['datetime']);
 
 		$checkgame1 = $row_nextgames['team_1_id']{
@@ -404,6 +405,7 @@ if ($action == "showresults") {
 		while ($row = $db->fetch_array($result)) {
 			$rowclass = getone($count++, "tablea", "tableb");
 			$gamedate = formatdate($wbbuserdata['dateformat'], $row['datetime'], 1);
+			$gamedate = strtr($gamedate, $replace_datum_komma);
 			$gametime = formatdate($wbbuserdata['timeformat'], $row['datetime']);
 			$flagge1 = "spacer.gif";
 			$flagge2 = "spacer.gif";
@@ -971,6 +973,7 @@ if ($action == "showusertippsdetail") {
 			}
 		}
 		$gamedate = formatdate($wbbuserdata['dateformat'], $row_game['datetime']);
+		$gamedate = strtr($gamedate, $replace_datum_komma);
 		$gametime = formatdate($wbbuserdata['timeformat'], $row_game['datetime']);
 
 		if ($row_game['gk'] == 1) {
@@ -1122,6 +1125,7 @@ if ($action == "showallgames") {
 	while ($row = $db->fetch_array($result)) {
 		$rowclass = getone($count++, "tablea", "tableb");
 		$gamedate = formatdate($wbbuserdata['dateformat'], $row['datetime']);
+		$gamedate = strtr($gamedate, $replace_datum_komma);
 		$gametime = formatdate($wbbuserdata['timeformat'], $row['datetime']);
 		if ($row['gruppe'] == 'A' || 'B' || 'C' || 'D' || 'E' || 'F' || 'G' || 'H') {
 			$type = $lang->items['LANG_EM2016_PHP_18'];
@@ -1218,6 +1222,7 @@ if ($action == "showallgames") {
 if ($action == "gamedetails") {
 	$result = $db->query_first("SELECT * FROM bb" . $n . "_em2016_spiele WHERE gameid = '" . intval($_REQUEST['gameid']) . "'");
 	$gamedate = formatdate($wbbuserdata['dateformat'], $result['datetime']);
+	$gamedate = strtr($gamedate, $replace_datum_komma);
 	$gametime = formatdate($wbbuserdata['timeformat'], $result['datetime']);
 	if ($result['gruppe'] == 'A' || 'B' || 'C' || 'D' || 'E' || 'F' || 'G' || 'H') {
 		$type = $lang->items['LANG_EM2016_PHP_18'];
