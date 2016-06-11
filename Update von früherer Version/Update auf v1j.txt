@@ -1,0 +1,6 @@
+Die Datei /wbb2/acp/em2016_admin.php ersetzen.
+Die Datei /wbb2/em2016.php ersetzen.
+Die Datei /wbb2/em2016_global.php ersetzen.
+
+
+Das ACP-Template /wbb2/acp/templates/em2016_results_viewbit.htm erstezen; ACP-templates cachen

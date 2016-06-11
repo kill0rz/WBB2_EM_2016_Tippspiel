@@ -45,3 +45,8 @@ v1i
 ---
 
 + Fixed: Umlautefehler in Mannschaftsnamen
+
+v1j
+---
+
++ Fixed: Heute,, und Gestern,, im Front- und Backend
