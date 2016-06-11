@@ -40,3 +40,8 @@ v1h
 ---
 
 + Fixed: Ein paar kleine Bugs bezüglich Escaping und SQL-Befehle
+
+v1i
+---
+
++ Fixed: Umlautefehler in Mannschaftsnamen
