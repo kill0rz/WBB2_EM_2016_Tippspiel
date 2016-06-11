@@ -48,6 +48,7 @@ if ($em2016_options['ebay_cat'] != 0) {
 $replace_datum_komma = array(
 	"<b>Heute</b>," => "<b>Heute</b>",
 	"Gestern," => "Gestern",
+	"<b>Morgen</b>," => "<b>Morgen</b>",
 );
 
 eval("\$em2016_ebay = \"" . $tpl->get("em2016_ebay") . "\";");
