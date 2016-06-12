@@ -1,0 +1,12 @@
+[!] HINWEIS: Dieses Update ist nur wichtig, wenn du das HM-Portal nutzt und die EM inkludieren willst!
+Danke an Mr.Fisch für den Mod :)
+
+Lade folgende PHP-Dateien auf deinen Server:
+/wbb2/em_meister.php
+/wbb2/em_quote.php
+/wbb2/em_rangliste.php
+
+Importiere alle Templates:
+/wbb2/templates/em2016_sponsor_*
+
+Den Anweisungen aus der Datei /Mods/HM-Portal-Mod_V1.txt folgen.
