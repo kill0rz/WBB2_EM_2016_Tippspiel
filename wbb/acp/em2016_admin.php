@@ -777,7 +777,7 @@ if ($action == "result_save") {
 				"&Ouml;" => "Ö",
 				"&uuml;" => "ü",
 				"&Uuml;" => "Ü",
-				);
+			);
 			$vgp_name1 = strtr($spiel_name1['name'], $umlaute_replace);
 			$vgp_flagge1 = '[img]images/em2016/flaggen/' . $spiel_name1['flagge'] . '[/img]';
 			$spiel_name2 = $db->query_first("SELECT name, flagge  FROM bb" . $n . "_em2016_teams WHERE teamid = '" . intval($spiel_erg['team_2_id']) . "'");
@@ -915,7 +915,11 @@ if ($action == "result_save") {
 				$db->unbuffered_query("UPDATE bb" . $n . "_users SET userposts=userposts+1 WHERE userid = '" . $em2016_options['vgpostuid'] . "'", 1);
 
 				/* Statistik updaten */
-				$db->unbuffered_query("UPDATE bb" . $n . "_stats SET threadcount=threadcount+1, postcount=postcount+1", 1);
+				if (intval($em2016_options['vgposttid']) == 0) {
+					$db->unbuffered_query("UPDATE bb" . $n . "_stats SET threadcount=threadcount+1, postcount=postcount+1", 1);
+				} else {
+					$db->unbuffered_query("UPDATE bb" . $n . "_stats SET postcount=postcount+1", 1);
+				}
 			}
 		}
 		/* Ende Posting erstellen */

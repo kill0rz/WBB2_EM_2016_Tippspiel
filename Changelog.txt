@@ -55,3 +55,8 @@ v1k
 ---
 
 + Added: Mod von Mr.Fisch: HM-Portal-Mod_V1.txt
+
+v1l
+---
+
++ Fixed: Beim Posten als Antwort wird der Threadcount erhöht
