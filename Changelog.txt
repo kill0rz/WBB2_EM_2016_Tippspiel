@@ -50,3 +50,8 @@ v1j
 ---
 
 + Fixed: Heute,, und Gestern,, im Front- und Backend
+
+v1k
+---
+
++ Added: Mod von Mr.Fisch: HM-Portal-Mod_V1.txt
