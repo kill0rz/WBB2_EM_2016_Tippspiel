@@ -1,1 +1,3 @@
 HM-Portal von Mr. Fish suaber implementieren/Änderungen von mir zurückspielen/HTML5-Anpassungen/Code in vorhandene Dateien mergen
+
+Mehrmaliges Eintragen eines Spiels verhindern
