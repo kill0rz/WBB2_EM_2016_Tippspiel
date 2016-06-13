@@ -60,3 +60,8 @@ v1l
 ---
 
 + Fixed: Beim Posten als Antwort wird der Threadcount erhöht
+
+v1m
+---
+
++ Fixed: Beim Posten als Antwort wird der Threadcount erhöht #2
