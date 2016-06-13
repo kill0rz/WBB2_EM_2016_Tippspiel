@@ -14,6 +14,11 @@ if (file_exists("./lib/em2016_install.lock")) {
 	die("Bitte l&ouml;schen Sie die Datei acp/lib/em2016_install.lock, um die De-Installation ausf&uuml;hren zu k&ouml;nnen!");
 }
 
+
+
+
+
+
 $filename = "em2016_uninstall.php";
 
 @error_reporting(7);

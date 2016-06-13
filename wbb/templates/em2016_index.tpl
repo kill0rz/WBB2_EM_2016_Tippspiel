@@ -45,7 +45,7 @@
 						</td>
 					</tr>
 					<tr>
-						<if($wbbuserdata[ 'userid'])>
+						<if($wbbuserdata['userid'])>
 							<then>
 								<td class="tableb" align="left">
 									<span class="smallfont">
@@ -54,7 +54,7 @@
 										<br />
 										<br /> {$lang->items['LANG_EM2016_TPL_INDEX_4']}
 										<br />
-										<if($em2016_options[ 'gh_aktiv']==1)>
+										<if($em2016_options['gh_aktiv']==1)>
 											<then>{$lang->items['LANG_EM2016_TPL_INDEX_5']}
 												<b>$wbbuserdata[guthaben]</b> $waehrung
 												<br />
@@ -71,7 +71,7 @@
 								</td>
 							</then>
 						</if>
-						<if(!$wbbuserdata[ 'userid'])>
+						<if(!$wbbuserdata['userid'])>
 							<then>
 								<td class="tableb" align="left">
 									<span class="smallfont">{$lang->items['LANG_EM2016_TPL_INDEX_33']},
@@ -87,7 +87,7 @@
 				</table>
 			</td>
 			<td align="right" width="50%" valign="top">
-				<if($em2016_options[ 'showrssnews']==1)>
+				<if($em2016_options['showrssnews']==1)>
 					<then>
 						<table cellpadding="{$style['tableincellpadding']}" cellspacing="{$style['tableincellspacing']}" border="{$style['tableinborder']}" style="width:{$style['tableinwidth']}" class="tableinborder">
 							<tr>
@@ -113,7 +113,7 @@
 		</tr>
 	</table>
 	<br />
-	<if($em2016_options[ '1st']==0)>
+	<if($em2016_options['1st']==0)>
 		<then>
 			<table cellpadding="4" cellspacing="1" border="0" style="width:{$style['tableinwidth']}">
 				<tr>
@@ -316,7 +316,7 @@
 				</table>
 			</td>
 			<br/>
-			<if($em2016_options[ 'gh_aktiv']==1 && $em2016_options[ 'gh_infos']==1)>
+			<if($em2016_options['gh_aktiv']==1 && $em2016_options['gh_infos']==1)>
 				<then>
 					<td align="center" width="50%" valign="top">
 						<table cellpadding="{$style['tableincellpadding']}" cellspacing="{$style['tableincellspacing']}" border="{$style['tableinborder']}" style="width:{$style['tableinwidth']}" class="tableinborder">
@@ -342,7 +342,7 @@
 									<span class="smallfont">{$lang->items['LANG_EM2016_TPL_INDEX_28']}</span>
 								</td>
 								<td class="tableb" align="center">
-									<span class="smallfont">$em2016_options[gh_ab_emtipp] $waehrung</span>
+									<span class="smallfont">$em2016_options[gh_ab_wmtipp] $waehrung</span>
 								</td>
 							</tr>
 							<tr>
@@ -353,7 +353,7 @@
 									<span class="smallfont">$em2016_options[gh_gut_normtipp_richtig] $waehrung</span>
 								</td>
 							</tr>
-							<if($em2016_options[ 'tendenz']==1)>
+							<if($em2016_options['tendenz']==1)>
 								<then>
 									<tr>
 										<td class="tablea" align="center">
@@ -365,14 +365,14 @@
 									</tr>
 								</then>
 								</if>
-								<if($em2016_options[ 'winnertipp_jn']==1)>
+								<if($em2016_options['winnertipp_jn']==1)>
 									<then>
 										<tr>
 											<td class="tablea" align="center">
 												<span class="smallfont">{$lang->items['LANG_EM2016_TPL_INDEX_31']}</span>
 											</td>
 											<td class="tablea" align="center">
-												<span class="smallfont">$em2016_options[gh_gut_emtipp_richtig] $waehrung</span>
+												<span class="smallfont">$em2016_options[gh_gut_wmtipp_richtig] $waehrung</span>
 											</td>
 										</tr>
 									</then>

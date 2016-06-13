@@ -65,3 +65,8 @@ v1m
 ---
 
 + Fixed: Beim Posten als Antwort wird der Threadcount erhöht #2
+
+v1n
+---
+
++ Fixed: [Tageswertung] Bei negativer Different wurde +-5 statt -5 angezeigt.

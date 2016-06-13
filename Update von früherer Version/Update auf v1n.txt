@@ -1,0 +1,3 @@
+Die Datei /wbb2/em2016.php ersetzen.
+
+Das Template /wbb2/em2016_index.tpl ersetzen.
