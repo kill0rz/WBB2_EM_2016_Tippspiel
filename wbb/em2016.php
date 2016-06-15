@@ -1366,10 +1366,10 @@ if ($action == "edittipp") {
 			redirect($lang->get("LANG_EM2016_PHP_41"), $url = "em2016.php?action=edittipp&amp;gameid={$_POST['gameid']}&amp;userid={$wbbuserdata['userid']}" . $SID_ARG_2ND);
 		}
 
-		$tippok = '1';
-		$gk = '-1';
-		$rk = '-1';
-		$elfer = '-1';
+		$tippok = 1;
+		$gk = -1;
+		$rk = -1;
+		$elfer = -1;
 		if (!preg_match("/^[0-9]{1,}/", intval($_POST['tipp_1']))) {
 			$tippok = 0;
 		}
@@ -1395,7 +1395,7 @@ if ($action == "edittipp") {
 		}
 		if ($tippok == 1) {
 			$db->unbuffered_query("UPDATE bb" . $n . "_em2016_usertipps SET goals_1 = '" . intval($_POST['tipp_1']) . "', goals_2 = '" . intval($_POST['tipp_2']) . "', gk = '$gk', rk = '$rk', elfer = '$elfer' WHERE gameid = '" . intval($_POST['gameid']) . "' AND userid = '" . intval($wbbuserdata['userid']) . "'");
-			redirect($lang->get("LANG_EM2016_PHP_45"), $url = "em2016.php" . $SID_ARG_1ST);
+			redirect($lang->get("LANG_EM2016_PHP_45"), $url = "em2016.php?action=showusertippsdetail&amp;userid={$wbbuserdata['userid']}" . $SID_ARG_1ST);
 		} elseif ($tippok == 0) {
 			redirect($lang->get("LANG_EM2016_PHP_46"), $url = "em2016.php?action=edittipp&amp;gameid=" . intval($_POST['gameid']) . "&amp;userid={$wbbuserdata['userid']}" . $SID_ARG_2ND);
 		}

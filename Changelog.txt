@@ -76,3 +76,4 @@ v1o
 
 + Fixed: Komma fehlt nach Datum in Tabelle "nächste Spiele"
 + Fixed: Im Tab User-Tipps werden nun auch die Wörter Gestern, Heute, Morgen anstatt des Datums angezeigt
++ Changed: Weiterleitung bei Tipp-Edit zurück auf die User-Tipps, nicht auf die Startseite
