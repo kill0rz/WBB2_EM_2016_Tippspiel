@@ -912,15 +912,15 @@ if ($action == "result_save") {
 				$boardstr = $db->query_first("SELECT parentlist FROM bb" . $n . "_boards WHERE boardid = '" . $boardid . "'");
 				$parentlist = $boardstr['parentlist'];
 				if (intval($em2016_options['vgposttid']) == 0) {
-	               /* update board info */
-	               $db->unbuffered_query("UPDATE bb" . $n . "_boards SET threadcount=threadcount+1, postcount=postcount+1, lastthreadid='$threadid', lastposttime='" . $time . "', lastposterid='" . $em2016_options['vgpostuid'] . "', lastposter='" . addslashes($user_info['username']) . "' WHERE boardid IN ($parentlist,$boardid)", 1);
-	           }else {
-	               /* update thread info */
-	               $db->unbuffered_query("UPDATE bb" . $n . "_threads SET lastposttime = '" . $time . "', lastposterid = '" . $em2016_options['vgpostuid'] . "', lastposter = '" . addslashes($user_info['username']) . "', replycount = replycount+1 WHERE threadid = '$threadid'", 1);
+					/* update board info */
+					$db->unbuffered_query("UPDATE bb" . $n . "_boards SET threadcount=threadcount+1, postcount=postcount+1, lastthreadid='$threadid', lastposttime='" . $time . "', lastposterid='" . $em2016_options['vgpostuid'] . "', lastposter='" . addslashes($user_info['username']) . "' WHERE boardid IN ($parentlist,$boardid)", 1);
+				} else {
+					/* update thread info */
+					$db->unbuffered_query("UPDATE bb" . $n . "_threads SET lastposttime = '" . $time . "', lastposterid = '" . $em2016_options['vgpostuid'] . "', lastposter = '" . addslashes($user_info['username']) . "', replycount = replycount+1 WHERE threadid = '$threadid'", 1);
 
-	               /* update board info */
-	               $db->unbuffered_query("UPDATE bb" . $n . "_boards SET postcount=postcount+1, lastthreadid='$threadid', lastposttime='" . $time . "', lastposterid='" . $em2016_options['vgpostuid'] . "', lastposter='" . addslashes($user_info['username']) . "' WHERE boardid IN ($parentlist,$boardid)", 1);
-	           }
+					/* update board info */
+					$db->unbuffered_query("UPDATE bb" . $n . "_boards SET postcount=postcount+1, lastthreadid='$threadid', lastposttime='" . $time . "', lastposterid='" . $em2016_options['vgpostuid'] . "', lastposter='" . addslashes($user_info['username']) . "' WHERE boardid IN ($parentlist,$boardid)", 1);
+				}
 				$db->unbuffered_query("UPDATE bb" . $n . "_users SET userposts=userposts+1 WHERE userid = '" . $em2016_options['vgpostuid'] . "'", 1);
 
 				/* Statistik updaten */
