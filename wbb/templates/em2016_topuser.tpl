@@ -9,7 +9,7 @@
 		<span class="smallfont ">$row_topuser[punkte] {$lang->items['LANG_EM2016_TPL_TOPUSER_1']}</span>
 	</td>
 	<td class="$rowclass" align="center">
-		<span class="smallfont ">+$tagerg</span>
+		<span class="smallfont ">$tagerg</span>
 	</td>
 	<td class="$rowclass" align="center">
 		<span class="smallfont ">$quote %</span>

@@ -1,5 +1,6 @@
 ToDo für EM 2016:
 -----------------
++ FixIt: Falsche Links im RSS-Feed
 
 
 ToDo für WM 2018:

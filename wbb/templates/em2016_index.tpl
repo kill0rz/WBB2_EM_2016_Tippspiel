@@ -342,7 +342,7 @@
 									<span class="smallfont">{$lang->items['LANG_EM2016_TPL_INDEX_28']}</span>
 								</td>
 								<td class="tableb" align="center">
-									<span class="smallfont">$em2016_options[gh_ab_wmtipp] $waehrung</span>
+									<span class="smallfont">$em2016_options[gh_ab_emtipp] $waehrung</span>
 								</td>
 							</tr>
 							<tr>
@@ -372,7 +372,7 @@
 												<span class="smallfont">{$lang->items['LANG_EM2016_TPL_INDEX_31']}</span>
 											</td>
 											<td class="tablea" align="center">
-												<span class="smallfont">$em2016_options[gh_gut_wmtipp_richtig] $waehrung</span>
+												<span class="smallfont">$em2016_options[gh_gut_emtipp_richtig] $waehrung</span>
 											</td>
 										</tr>
 									</then>

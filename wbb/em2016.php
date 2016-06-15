@@ -67,8 +67,9 @@ if ($em2016_options['lasttageswertungreset'] != date("d")) {
 }
 
 $lastgame4emtipp = $db->query_first("SELECT datetime FROM bb" . $n . "_em2016_spiele WHERE gameid = '" . intval($em2016_options['lastgame4emtipp']) . "'");
-$lastgamedate = formatdate($wbbuserdata['dateformat'], $lastgame4emtipp['datetime']);
+$lastgamedate = formatdate($wbbuserdata['dateformat'], $lastgame4emtipp['datetime'], 1);
 $lastgametime = formatdate($wbbuserdata['timeformat'], $lastgame4emtipp['datetime']);
+
 // ++++++++++++++++++
 // +++ Startseite +++
 // ++++++++++++++++++
