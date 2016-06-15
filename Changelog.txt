@@ -70,3 +70,9 @@ v1n
 ---
 
 + Fixed: [Tageswertung] Bei negativer Different wurde +-5 statt -5 angezeigt.
+
+v1o
+---
+
++ Fixed: Komma fehlt nach Datum in Tabelle "nächste Spiele"
++ Fixed: Im Tab User-Tipps werden nun auch die Wörter Gestern, Heute, Morgen anstatt des Datums angezeigt

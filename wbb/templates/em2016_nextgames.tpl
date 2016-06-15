@@ -1,6 +1,6 @@
 <tr>
 	<td class="$rowclass" align="center" width="10%">
-		<span class="smallfont">$gamedate
+		<span class="smallfont">$gamedate,
 			<br />$gametime {$lang->items['LANG_EM2016_TPL_NEXTGAMES_1']}</span>
 	</td>
 	<td class="$rowclass" align="center" width="10%">

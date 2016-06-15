@@ -1,0 +1,2 @@
+Das Template /wbb2/templates/em2016_nextgames.tpl ersetzen.
+Das Datei /wbb2/em2016.php ersetzen.

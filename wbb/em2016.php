@@ -64,7 +64,6 @@ if ($em2016_options['lasttageswertungreset'] != date("d")) {
 		}
 		$db->query("INSERT INTO bb" . $n . "_em2016_vortag (userid, punkte, pos) VALUES ('" . $row_topuser['userid'] . "', '" . $row_topuser['punkte'] . "', '" . $em2016_rank . "');");
 	}
-
 }
 
 $lastgame4emtipp = $db->query_first("SELECT datetime FROM bb" . $n . "_em2016_spiele WHERE gameid = '" . intval($em2016_options['lastgame4emtipp']) . "'");
@@ -308,7 +307,7 @@ if ($action == "index") {
 		$vortag = $db->query_first("SELECT userid,pos,punkte FROM bb" . $n . "_em2016_vortag WHERE userid = '" . intval($row_topuser['userid']) . "'");
 
 		$tagerg = $row_topuser['punkte'] - $vortag['punkte'];
-		if($tagerg >= 0){
+		if ($tagerg >= 0) {
 			$tagerg = "+" . $tagerg;
 		}
 
@@ -975,7 +974,7 @@ if ($action == "showusertippsdetail") {
 				$flagge2 = $allflags2[$i];
 			}
 		}
-		$gamedate = formatdate($wbbuserdata['dateformat'], $row_game['datetime']);
+		$gamedate = formatdate($wbbuserdata['dateformat'], $row_game['datetime'], 1);
 		$gamedate = strtr($gamedate, $replace_datum_komma);
 		$gametime = formatdate($wbbuserdata['timeformat'], $row_game['datetime']);
 

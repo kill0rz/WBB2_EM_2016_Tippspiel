@@ -1,3 +1,12 @@
-HM-Portal von Mr. Fish suaber implementieren/Änderungen von mir zurückspielen/HTML5-Anpassungen/Code in vorhandene Dateien mergen
+ToDo für EM 2016:
+-----------------
++ Weiterleitung bei Tipp-Edit zurück auf die Tippabgabe, nicht auf die Startseite
 
-Mehrmaliges Eintragen eines Spiels verhindern
+
+
+
+ToDo für WM 2018:
+-----------------
++ Tageswertung nur bei neuen Spielergebnissen zurücksetzen; nicht um Mitternacht
++ Mehrmaliges Eintragen eines Spiels verhindern
++ HM-Portal von Mr. Fish suaber implementieren/Änderungen von mir zurückspielen/HTML5-Anpassungen/Code in vorhandene Dateien mergen
