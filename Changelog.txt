@@ -81,3 +81,8 @@ v1o
 + Fixed: 2 falsche Variablen in der em2016_index.tpl (Danke Stine!)
 + Fixed: RSS-Links zur Fifa gehen wieder
 + Changed: Weiterleitung bei Tipp-Edit zurück auf die User-Tipps, nicht auf die Startseite
+
+v1p
+---
+
++ Changed: "Tageswertung" bezieht sich nun auf das jeweils vorherige Spiel; nicht mehr auf den vorherigen Tag. Bringt nix, wenn das Mitternacht zurückgesetzt wird und dann 15 Stunden lang nichts da steht.

@@ -17,7 +17,7 @@ if (file_exists("./lib/em2016_install.lock")) {
 
 $filename = "em2016_setup.php";
 
-$version = "v1o";
+$version = "v1p";
 
 @error_reporting(7);
 @set_time_limit(0);

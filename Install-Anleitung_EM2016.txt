@@ -1,4 +1,4 @@
-Version: v1o
+Version: v1p
 
 
 Installations-Anleitung für das EM2016-Tippspiel

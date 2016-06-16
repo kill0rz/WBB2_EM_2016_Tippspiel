@@ -4,8 +4,8 @@ ToDo für EM 2016:
 
 ToDo für WM 2018:
 -----------------
-+ Tageswertung nur bei neuen Spielergebnissen zurücksetzen; nicht um Mitternacht
 + Mehrmaliges Eintragen eines Spiels verhindern (Post-Parameter checken vor der Verarbeitung im ACP gegen leere Felder in DB)
 + HM-Portal von Mr. Fish suaber implementieren/Änderungen von mir zurückspielen/HTML5-Anpassungen/Code in vorhandene Dateien mergen
 + Nummerfelder verwenden: ACP > Ergebnis eintragen
 + Nummerfelder verwenden: Tipp eintragen/editieren
++ Tageswertung rückbauen
