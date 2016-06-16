@@ -74,6 +74,7 @@ v1n
 v1o
 ---
 
++ Added: Link im Haeder: Meine Tipps
 + Fixed: Komma fehlt nach Datum in Tabelle "nächste Spiele"
 + Fixed: Im Tab User-Tipps werden nun auch die Wörter Gestern, Heute, Morgen anstatt des Datums angezeigt
 + Fixed: Beim Tippen des Vize-/Europameisters werden nun auch die Wörter Gestern, Heute, Morgen anstatt des Datums angezeigt

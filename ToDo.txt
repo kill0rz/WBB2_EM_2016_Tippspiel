@@ -1,7 +1,6 @@
 ToDo für EM 2016:
 -----------------
 + Zeiten im ACP falsch?
-+ Link im Haeder: Meine Tipps
 
 
 ToDo für WM 2018:
