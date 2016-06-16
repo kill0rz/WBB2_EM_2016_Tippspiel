@@ -43,28 +43,29 @@ if ($em2016_options['gh_aktiv'] == 1) {
 	$waehrung = $waehrung['waehrung'];
 }
 
+/*
 //Reset Tageswertung 1x am Tag
 if ($em2016_options['lasttageswertungreset'] != date("d")) {
-	// update reset-Datum
-	$db->query("UPDATE bb" . $n . "_em2016_options SET lasttageswertungreset='" . date("d") . "';");
+// update reset-Datum
+$db->query("UPDATE bb" . $n . "_em2016_options SET lasttageswertungreset='" . date("d") . "';");
 
-	// reset tageswertung
-	$db->query("DROP TABLE IF EXISTS bb" . $n . "_em2016_vortag");
-	$db->query("CREATE TABLE bb" . $n . "_em2016_vortag (userid int(5), punkte int(10), pos int(3) default NULL auto_increment, PRIMARY KEY (pos));");
-	$db->query("ALTER TABLE bb" . $n . "_em2016_vortag ADD `id` int(5) NULL AUTO_INCREMENT UNIQUE FIRST, CHANGE `userid` `userid` int(10) NULL AFTER `id`, CHANGE `pos` `pos` int(10) NOT NULL AFTER `punkte`;");
-	$db->query("ALTER TABLE bb" . $n . "_em2016_vortag ADD PRIMARY KEY `id` (`id`), DROP INDEX `PRIMARY`;");
-	$result_topuser = $db->query("SELECT u.username,p.* FROM bb" . $n . "_em2016_userpunkte p LEFT JOIN bb" . $n . "_users u USING (userid) ORDER BY punkte DESC, ((tipps_richtig+tipps_tendenz)/tipps_falsch) DESC,tipps_gesamt DESC  Limit 0,{$em2016_options['topuser']}");
+// reset tageswertung
+$db->query("DROP TABLE IF EXISTS bb" . $n . "_em2016_vortag");
+$db->query("CREATE TABLE bb" . $n . "_em2016_vortag (userid int(5), punkte int(10), pos int(3) default NULL auto_increment, PRIMARY KEY (pos));");
+$db->query("ALTER TABLE bb" . $n . "_em2016_vortag ADD `id` int(5) NULL AUTO_INCREMENT UNIQUE FIRST, CHANGE `userid` `userid` int(10) NULL AFTER `id`, CHANGE `pos` `pos` int(10) NOT NULL AFTER `punkte`;");
+$db->query("ALTER TABLE bb" . $n . "_em2016_vortag ADD PRIMARY KEY `id` (`id`), DROP INDEX `PRIMARY`;");
+$result_topuser = $db->query("SELECT u.username,p.* FROM bb" . $n . "_em2016_userpunkte p LEFT JOIN bb" . $n . "_users u USING (userid) ORDER BY punkte DESC, ((tipps_richtig+tipps_tendenz)/tipps_falsch) DESC,tipps_gesamt DESC  Limit 0,{$em2016_options['topuser']}");
 
-	while ($row_topuser = $db->fetch_array($result_topuser)) {
-		//insert values vortag
-		$em2016_rank_merk = $em2016_rank_merk + 1;
-		if ($em2016_punkte_merk != $row_topuser['punkte']) {
-			$em2016_rank = $em2016_rank_merk;
-			$em2016_punkte_merk = $row_topuser['punkte'];
-		}
-		$db->query("INSERT INTO bb" . $n . "_em2016_vortag (userid, punkte, pos) VALUES ('" . $row_topuser['userid'] . "', '" . $row_topuser['punkte'] . "', '" . $em2016_rank . "');");
-	}
+while ($row_topuser = $db->fetch_array($result_topuser)) {
+//insert values vortag
+$em2016_rank_merk = $em2016_rank_merk + 1;
+if ($em2016_punkte_merk != $row_topuser['punkte']) {
+$em2016_rank = $em2016_rank_merk;
+$em2016_punkte_merk = $row_topuser['punkte'];
 }
+$db->query("INSERT INTO bb" . $n . "_em2016_vortag (userid, punkte, pos) VALUES ('" . $row_topuser['userid'] . "', '" . $row_topuser['punkte'] . "', '" . $em2016_rank . "');");
+}
+}*/
 
 $lastgame4emtipp = $db->query_first("SELECT datetime FROM bb" . $n . "_em2016_spiele WHERE gameid = '" . intval($em2016_options['lastgame4emtipp']) . "'");
 $lastgamedate = formatdate($wbbuserdata['dateformat'], $lastgame4emtipp['datetime']);
