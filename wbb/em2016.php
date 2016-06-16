@@ -67,9 +67,8 @@ if ($em2016_options['lasttageswertungreset'] != date("d")) {
 }
 
 $lastgame4emtipp = $db->query_first("SELECT datetime FROM bb" . $n . "_em2016_spiele WHERE gameid = '" . intval($em2016_options['lastgame4emtipp']) . "'");
-$lastgamedate = formatdate($wbbuserdata['dateformat'], $lastgame4emtipp['datetime'], 1);
+$lastgamedate = formatdate($wbbuserdata['dateformat'], $lastgame4emtipp['datetime']);
 $lastgametime = formatdate($wbbuserdata['timeformat'], $lastgame4emtipp['datetime']);
-
 // ++++++++++++++++++
 // +++ Startseite +++
 // ++++++++++++++++++
@@ -94,7 +93,8 @@ if ($action == "index") {
 			if ($count <= $em2016_options['rssnews']) {
 				preg_match("/<title>(.+)<\/title>/U", $item, $title);
 				preg_match("/<link>(.+)<\/link>/U", $item, $link);
-				$link1 = $link[1];
+				$link1 = 'http://de.fifa.com' . $link[1];
+				// $link1 = $link[1];
 				// $link1 = substr("$link1", 9);
 				// $link1 = substr("$link1", 0, - 3);
 				$title1 = $title[1];

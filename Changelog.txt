@@ -77,9 +77,6 @@ v1o
 + Fixed: Komma fehlt nach Datum in Tabelle "nächste Spiele"
 + Fixed: Im Tab User-Tipps werden nun auch die Wörter Gestern, Heute, Morgen anstatt des Datums angezeigt
 + Fixed: Beim Tippen des Vize-/Europameisters werden nun auch die Wörter Gestern, Heute, Morgen anstatt des Datums angezeigt
-+ Changed: Weiterleitung bei Tipp-Edit zurück auf die User-Tipps, nicht auf die Startseite
 + Fixed: 2 falsche Variablen in der em2016_index.tpl (Danke Stine!)
-
-SOLL:
-+ Reset Tageswertung um 15.00Uhr
-+ RSS fixen
++ Fixed: RSS-Links zur Fifa gehen wieder
++ Changed: Weiterleitung bei Tipp-Edit zurück auf die User-Tipps, nicht auf die Startseite

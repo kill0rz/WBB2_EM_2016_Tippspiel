@@ -1,6 +1,7 @@
 ToDo für EM 2016:
 -----------------
-+ FixIt: Falsche Links im RSS-Feed
++ Zeiten im ACP falsch?
++ Link im Haeder: Meine Tipps
 
 
 ToDo für WM 2018:
