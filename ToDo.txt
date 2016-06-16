@@ -9,3 +9,4 @@ ToDo für WM 2018:
 + Nummerfelder verwenden: ACP > Ergebnis eintragen
 + Nummerfelder verwenden: Tipp eintragen/editieren
 + Tageswertung rückbauen
++ Editierfunktion für ACP-Ergebnisse
