@@ -10,3 +10,6 @@ ToDo für WM 2018:
 + Nummerfelder verwenden: Tipp eintragen/editieren
 + Tageswertung rückbauen
 + Editierfunktion für ACP-Ergebnisse
++ Anzeigen des aktuellen Spiels, wenn gerade gespeilt wird
+	+ Übersicht über das Spiel, wer gegen wen 
+	+ Tipps der User
