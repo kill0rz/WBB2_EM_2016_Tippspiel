@@ -14,3 +14,8 @@ ToDo für WM 2018:
 	+ Übersicht über das Spiel, wer gegen wen 
 	+ Tipps der User
 + Anzeigen der Spiele, die noch nicht eingetragen wurden auf index
++ Bei Tippabgabe Fahnen neben dem Text im ACP anzeigen (save result step 2)
++ index: Tabelle letzte Spiele in denen man schnell zu Details der letzten 2(?) Spiele kommt
+	+ Per ACP einstellbar machen
++ action: tippsprogame
+	+ Bildchen ob richtig/falsch/tendenz wie bei User-Tipps neben den Tipps, aber nur wenn Spiel vorbei
