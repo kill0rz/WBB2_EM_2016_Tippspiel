@@ -55,6 +55,9 @@ if($seiteninfos[seiten_text]=="[emtippbest5]")
 			$vortag = $db->query_first("SELECT userid,pos,punkte FROM bb" . $n . "_em2016_vortag WHERE userid = '" . intval($row_topuser['userid']) . "'");
 
 			$tagerg = $row_topuser['punkte'] - $vortag['punkte'];
+			if ($tagerg >= 0) {
+				$tagerg = "+" . $tagerg;
+			}
 
 			if (!isset($vortag['pos']) || $vortag['pos'] > $em2016_rank) {
 				$tagtendenz = "<img src=\"images/em2016/hoch.jpg\">";

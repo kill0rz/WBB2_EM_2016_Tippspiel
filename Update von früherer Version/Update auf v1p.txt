@@ -1,3 +1,8 @@
 Die Datei /wbb2/em2016.php ersetzen.
 Die Datei /wbb2/acp/em2016_admin.php ersetzen.
 Das Template /wbb2/templates/em2016_header.tpl ersetzen.
+
+
+
+OPTIONAL:
+Wenn du den Mod für das JGS-Portal drin hast, bitte den Code in den Dateien mit dem aus der Anleitung ersetzen.
