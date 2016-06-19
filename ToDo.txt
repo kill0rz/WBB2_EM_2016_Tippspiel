@@ -24,3 +24,4 @@ ToDo für WM 2018:
 	+ Tipps
 	+ Spieleübersicht
 + Fehlerseite, wenn Tipps noch nicht einsehbar
++ Tageswertung nur beim ersten Spiel des Tages zurücksetzen lassen???
