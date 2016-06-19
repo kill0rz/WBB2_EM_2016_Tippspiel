@@ -813,6 +813,7 @@ if ($action == "result_save") {
 			$vgp_user_ranking_10 = '';
 			$vgp_count = 0;
 			$result_topuser = $db->query("SELECT u.username,p.* FROM bb" . $n . "_em2016_userpunkte p LEFT JOIN bb" . $n . "_users u USING (userid) ORDER BY punkte DESC, tipps_gesamt DESC Limit 0, 10");
+			$em2016_rank_merk = 0;
 			while ($row_topuser = $db->fetch_array($result_topuser)) {
 				$vgp_count++;
 				// ** Ranking Start *//
