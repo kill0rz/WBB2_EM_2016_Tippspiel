@@ -3,14 +3,13 @@
 		<td align="center" style="background-image:url(images/back.gif)">
 			<span>
 				<b><a href="em2016.php{$SID_ARG_1ST}">{$lang->items['LANG_EM2016_TPL_HEADER_1']}</a></b> |
-				<if($wbbuserdata[ 'can_em2016_use']==1)>
+				<if($wbbuserdata['can_em2016_use']==1)>
 					<then>
 						<b><a href="em2016.php?action=maketipp{$SID_ARG_2ND}">{$lang->items['LANG_EM2016_TPL_HEADER_2']}</a></b> | </then>
 					</if>
 					<b><a href="em2016.php?action=showresults&amp;auswahl=1{$SID_ARG_2ND}">{$lang->items['LANG_EM2016_TPL_HEADER_3']}</a></b> |
 					<b><a href="board.php?boardid={$em2016_options['diskussionsthreadid']}" target="_blank">Fragen&amp;Talk zum Spiel</a></b> |
-					<b><a href="em2016.php?action=showusertipps{$SID_ARG_2ND}">{$lang->items['LANG_EM2016_TPL_HEADER_4']}</a></b> |
-					<b><a href="em2016.php?action=showusertippsdetail&amp;userid=$wbbuserdata[userid]{$SID_ARG_2ND}">Meine Tipps</a></b>
+					<b><a href="em2016.php?action=showusertipps{$SID_ARG_2ND}">{$lang->items['LANG_EM2016_TPL_HEADER_4']}</a></b>
 			</span>
 		</td>
 	</tr>
@@ -60,7 +59,7 @@
 						minutesstring1 = "Minute";
 					}
 
-					value1 = "EM Endspiel: <b>" + days1 + "</b> " + daystring1 + " | <b>" + hours1 + "</b>  " + hoursstring1 + " | <b>" + minutes1 + " </b> " + minutesstring1 + " | <b>" + seconds1 + "</b> Sekunden";
+					value1 = "EM Endspiel in <b>" + days1 + "</b> " + daystring1 + " | <b>" + hours1 + "</b>  " + hoursstring1 + " | <b>" + minutes1 + " </b> " + minutesstring1 + " | <b>" + seconds1 + "</b> Sekunden";
 
 					if (document.getElementById) {
 						document.getElementById("counter1").innerHTML = value1;
@@ -74,7 +73,7 @@
 			</font>
 		</td>
 	</tr>
-	<if($em2016_options[ 'showemticker']==1)>
+	<if($em2016_options['showemticker']==1)>
 		<then>
 			<tr>
 				<td class="tableb" align="center">
