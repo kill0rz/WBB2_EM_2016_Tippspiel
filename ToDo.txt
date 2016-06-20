@@ -10,7 +10,7 @@ ToDo für WM 2018:
 + HM-Portal von Mr. Fish suaber implementieren/Änderungen von mir zurückspielen/HTML5-Anpassungen/Code in vorhandene Dateien mergen
 + Nummerfelder verwenden: ACP > Ergebnis eintragen
 + Nummerfelder verwenden: Tipp eintragen/editieren
-+ Tageswertung rückbauen ACP > eintragen
++ Tageswertung rückbauen: ACP > eintragen
 + Editierfunktion für ACP-Ergebnisse
 + Anzeigen des aktuellen Spiels, wenn gerade gespeilt wird auf index
 	+ Übersicht über das Spiel, wer gegen wen 
@@ -27,3 +27,4 @@ ToDo für WM 2018:
 	+ Spieleübersicht
 + Fehlerseite, wenn Tipps noch nicht einsehbar
 + Tageswertung nur beim ersten Spiel des Tages zurücksetzen lassen???
++ Tageswertung in VGPost implementieren
