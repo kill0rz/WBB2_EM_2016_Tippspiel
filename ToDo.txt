@@ -1,6 +1,8 @@
 ToDo für EM 2016:
 -----------------
 
++ Fixit: Threadantwort gibt immer 2 Antworten zu viel (also 3 Antworten werden geschrieben)
+
 
 ToDo für WM 2018:
 -----------------
