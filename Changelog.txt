@@ -88,3 +88,9 @@ v1p
 + Changed: "Tageswertung" bezieht sich nun auf das jeweils vorherige Spiel; nicht mehr auf den vorherigen Tag. Bringt nix, wenn das Mitternacht zurückgesetzt wird und dann 15 Stunden lang nichts da steht.
 + Changed: Text im Header
 + Fixed: JGS-Portal Punktedifferenzproblem
+
+v1q
+---
+
++ Fixed: Mehrere Antworten zu einem Thread in die Datenbank geschrieben
++ Fixed: Einige PHP7-Fixes im ACP
