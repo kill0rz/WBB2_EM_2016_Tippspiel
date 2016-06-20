@@ -736,7 +736,7 @@ if ($action == "result_save") {
 				$punkte4user_em = $db->query_first("SELECT wert FROM bb" . $n . "_em2016_punkte WHERE punkteid = '6'");
 				$punkte4user_vem = $db->query_first("SELECT wert FROM bb" . $n . "_em2016_punkte WHERE punkteid = '7'");
 				$db->query("UPDATE bb" . $n . "_em2016_userpunkte SET punkte = punkte + {$punkte4user_em['wert']} WHERE tipp_em = '{$team_g}'");
-				$db->query("UPDATE bb" . $n . "_em2016_userpunkte SET punkte = punkte + {$punkte4user_vem['wert']} WHERE tipp_vem = '$team_v'");
+				$db->query("UPDATE bb" . $n . "_em2016_userpunkte SET punkte = punkte + {$punkte4user_vem['wert']} WHERE tipp_vem = '{$team_v}'");
 				// Guthabenhack aktiv ?
 				if ($em2016_options['gh_aktiv'] == 1) {
 					$result = $db->query("SELECT * FROM bb" . $n . "_em2016_userpunkte WHERE tipp_em = '{$team_g}'");
@@ -744,7 +744,7 @@ if ($action == "result_save") {
 						$db->query("UPDATE bb" . $n . "_users SET guthaben = guthaben + {$em2016_options['gh_gut_emtipp_richtig']} WHERE userid = '" . $row['userid'] . "'");
 						$db->query("INSERT INTO bb" . $n . "_kontoauszug VALUES ('','" . $row['userid'] . "','" . time() . "','" . $lang->items['LANG_ACP_EM2016_PHP_3'] . "','" . $em2016_options['gh_gut_emtipp_richtig'] . "','" . $lang->items['LANG_ACP_EM2016_PHP_2'] . "')");
 					}
-					$result = $db->query("SELECT * FROM bb" . $n . "_em2016_userpunkte WHERE tipp_vem = '$team_v'");
+					$result = $db->query("SELECT * FROM bb" . $n . "_em2016_userpunkte WHERE tipp_vem = '{$team_v}'");
 					while ($row = $db->fetch_array($result)) {
 						$db->query("UPDATE bb" . $n . "_users SET guthaben = guthaben + {$em2016_options['gh_gut_emtipp_richtig']} WHERE userid = '" . $row['userid'] . "'");
 						$db->query("INSERT INTO bb" . $n . "_kontoauszug VALUES ('','" . $row['userid'] . "','" . time() . "','" . $lang->items['LANG_ACP_EM2016_PHP_4'] . "','" . $em2016_options['gh_gut_emtipp_richtig'] . "','" . $lang->items['LANG_ACP_EM2016_PHP_2'] . "')");
@@ -921,23 +921,18 @@ if ($action == "result_save") {
 							VALUES ('" . $threadid . "', '" . $em2016_options['vgpostuid'] . "', '" . addslashes($user_info['username']) . "', '" . $em2016_options['viconid'] . "', '" . addslashes($subjekt) . "', '" . $time . "', '" . addslashes($b_thread) . "', '0', '1', '" . $em2016_options['vgposthtml'] . "', '1', '1', '1', '" . addslashes($REMOTE_ADDR) . "', '1')");
 				$postid = $db->insert_id();
 
-				if (intval($em2016_options['vgposttid']) != 0) {
-					/* update thread info */
-					$db->unbuffered_query("UPDATE bb" . $n . "_threads SET lastposttime = '" . $time . "', lastposterid = '" . $em2016_options['vgpostuid'] . "', lastposter = '" . addslashes($user_info['username']) . "', replycount = replycount+1 WHERE threadid = '" . $threadid . "'", 1);
-				}
-
 				/* Board updaten */
 				$boardstr = $db->query_first("SELECT parentlist FROM bb" . $n . "_boards WHERE boardid = '" . $boardid . "'");
 				$parentlist = $boardstr['parentlist'];
 				if (intval($em2016_options['vgposttid']) == 0) {
 					/* update board info */
-					$db->unbuffered_query("UPDATE bb" . $n . "_boards SET threadcount=threadcount+1, postcount=postcount+1, lastthreadid='$threadid', lastposttime='" . $time . "', lastposterid='" . $em2016_options['vgpostuid'] . "', lastposter='" . addslashes($user_info['username']) . "' WHERE boardid IN ($parentlist,$boardid)", 1);
+					$db->unbuffered_query("UPDATE bb" . $n . "_boards SET threadcount=threadcount+1, postcount=postcount+1, lastthreadid='{$threadid}', lastposttime='" . $time . "', lastposterid='" . $em2016_options['vgpostuid'] . "', lastposter='" . addslashes($user_info['username']) . "' WHERE boardid IN ($parentlist,$boardid)", 1);
 				} else {
 					/* update thread info */
-					$db->unbuffered_query("UPDATE bb" . $n . "_threads SET lastposttime = '" . $time . "', lastposterid = '" . $em2016_options['vgpostuid'] . "', lastposter = '" . addslashes($user_info['username']) . "', replycount = replycount+1 WHERE threadid = '$threadid'", 1);
+					$db->unbuffered_query("UPDATE bb" . $n . "_threads SET lastposttime = '" . $time . "', lastposterid = '" . $em2016_options['vgpostuid'] . "', lastposter = '" . addslashes($user_info['username']) . "', replycount = replycount+1 WHERE threadid = '{$threadid}'", 1);
 
 					/* update board info */
-					$db->unbuffered_query("UPDATE bb" . $n . "_boards SET postcount=postcount+1, lastthreadid='$threadid', lastposttime='" . $time . "', lastposterid='" . $em2016_options['vgpostuid'] . "', lastposter='" . addslashes($user_info['username']) . "' WHERE boardid IN ($parentlist,$boardid)", 1);
+					$db->unbuffered_query("UPDATE bb" . $n . "_boards SET postcount=postcount+1, lastthreadid='{$threadid}', lastposttime='" . $time . "', lastposterid='" . $em2016_options['vgpostuid'] . "', lastposter='" . addslashes($user_info['username']) . "' WHERE boardid IN ({$parentlist},{$boardid})", 1);
 				}
 				$db->unbuffered_query("UPDATE bb" . $n . "_users SET userposts=userposts+1 WHERE userid = '" . $em2016_options['vgpostuid'] . "'", 1);
 
