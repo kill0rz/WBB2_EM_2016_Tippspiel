@@ -29,3 +29,6 @@ ToDo für WM 2018:
 	+ Du musst noch X Tipps für die Spiele innerhalb der nächsten 24h abgeben
 	+ Option deaktivieren
 	+ Option zum Reaktivieren
++ Spielereihenfolde beim Eintragen beachten
+	+ Spiel 36 ist nicht das letzte!
++ Beste Dritte rückbauen

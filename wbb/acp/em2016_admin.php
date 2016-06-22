@@ -575,7 +575,7 @@ if ($action == "result_save") {
 			while ($row = $db->fetch_array($result)) {
 				// $docontinue -> ist das gefunde team schon in einem anderen Spiel?
 				$docontinue = false;
-				if (!$currentgameid == 32) {
+				if ($currentgameid != 32) {
 					if ($currentgameid >= 34) {
 						$result = $db->query("SELECT team_2_id FROM bb" . $n . "_em2016_spiele WHERE gameid = '38';");
 						while ($row2 = $db->fetch_array($result)) {
