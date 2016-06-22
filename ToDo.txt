@@ -28,3 +28,7 @@ ToDo für WM 2018:
 + Fehlerseite, wenn Tipps noch nicht einsehbar
 + Tageswertung nur beim ersten Spiel des Tages zurücksetzen lassen???
 + Tageswertung in VGPost implementieren
++ Hinweis auf Forenindex:
+	+ Du musst noch X Tipps für die Spiele innerhalb der nächsten 24h abgeben
+	+ Option deaktivieren
+	+ Option zum Reaktivieren
