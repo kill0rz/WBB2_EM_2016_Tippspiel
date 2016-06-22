@@ -1,1 +1,4 @@
 Die Datei /wbb2/acp/em2016_admin.php ersetzen.
+
+OPTIONAL:
+Wenn du den Mod für das JGS-Portal drin hast, bitte den Code in den Dateien mit dem aus der Anleitung ersetzen.
