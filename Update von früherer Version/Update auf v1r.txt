@@ -1,0 +1,3 @@
+Das Template /wbb2/templates/em2016_header.tpl ersetzen.
+
+Falls du das Achtelfinale korrigieren möchtest, führe bitte die SQL-Befehel der Datei /Update von früherer Version/Achtelfinale.sql im ACP aus.

@@ -94,3 +94,9 @@ v1q
 
 + Fixed: Mehrere Antworten zu einem Thread in die Datenbank geschrieben
 + Fixed: Einige PHP7-Fixes im ACP
+
+v1r
+---
+
++ Regression: Link "Meine Tipps" im Header war wieder weg
++ SQL-Datei hinzugefügt um Achtelfinale zu korrigieren
