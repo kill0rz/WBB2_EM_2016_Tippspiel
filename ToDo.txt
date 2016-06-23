@@ -37,4 +37,4 @@ ToDo für WM 2018:
 ToDo für die EM 2020:
 ---------------------
 + Spielereihenfolde beim Eintragen beachten
-	+ Bestedritte berechnung folgt nicht der Spielenummerierung
+	+ Bestedritte Berechnung folgt nicht der Spielenummerierung
