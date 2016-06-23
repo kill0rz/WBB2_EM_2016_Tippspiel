@@ -9,6 +9,7 @@
 					</if>
 					<b><a href="em2016.php?action=showresults&amp;auswahl=1{$SID_ARG_2ND}">{$lang->items['LANG_EM2016_TPL_HEADER_3']}</a></b> |
 					<b><a href="board.php?boardid={$em2016_options['diskussionsthreadid']}" target="_blank">Fragen&amp;Talk zum Spiel</a></b> |
+					<b><a href="em2016.php?action=showusertippsdetail&amp;userid=$wbbuserdata[userid]{$SID_ARG_2ND}">Meine Tipps</a></b> |
 					<b><a href="em2016.php?action=showusertipps{$SID_ARG_2ND}">{$lang->items['LANG_EM2016_TPL_HEADER_4']}</a></b>
 			</span>
 		</td>
@@ -24,49 +25,40 @@
 				servernow1 = new Date(jetzta.getTime());
 				clientnow1 = new Date();
 				countdownTimer1 = window.setTimeout("countdown1()", 1000);
-
 				function countdown1() {
 					now1 = new Date();
 					seconds1 = Math.floor((goal1.getTime() - servernow1.getTime() - now1.getTime() + clientnow1.getTime()) / 1000);
 					if (seconds1 < 0) {
 						seconds1 = 0;
 					}
-
 					days1 = Math.floor(seconds1 / 60 / 60 / 24);
 					hours1 = Math.floor((seconds1 - days1 * 24 * 60 * 60) / 60 / 60);
 					minutes1 = Math.floor((seconds1 - (days1 * 24 + hours1) * 60 * 60) / 60);
 					seconds1 = (seconds1 - ((days1 * 24 + hours1) * 60 + minutes1) * 60);
-
 					if (seconds1 < 10) {
 						seconds1 = "0" + seconds1;
 					}
 					if (minutes1 < 10) {
 						minutes1 = "0" + minutes1;
 					}
-
 					daystring1 = "Tage";
 					if (days1 == 1) {
 						daystring1 = "Tag";
 					}
-
 					hoursstring1 = "Stunden";
 					if (hours1 == 1) {
 						hoursstring1 = "Stunde";
 					}
-
 					minutesstring1 = "Minuten";
 					if (minutes1 == 1) {
 						minutesstring1 = "Minute";
 					}
-
 					value1 = "EM Endspiel in <b>" + days1 + "</b> " + daystring1 + " | <b>" + hours1 + "</b>  " + hoursstring1 + " | <b>" + minutes1 + " </b> " + minutesstring1 + " | <b>" + seconds1 + "</b> Sekunden";
-
 					if (document.getElementById) {
 						document.getElementById("counter1").innerHTML = value1;
 					} else if (document.all) {
 						document.all["counter1"].innerHTML = value1;
 					}
-
 					countdownTimer = window.setTimeout("countdown1()", 1000);
 				}
 				</script>
