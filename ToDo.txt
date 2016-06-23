@@ -33,3 +33,8 @@ ToDo für WM 2018:
 	+ Spiel 36 ist nicht das letzte!
 + Beste Dritte rückbauen
 + Spiele können erst eingetragen werden, wenn das Spiel begonnen hat
+
+ToDo für die EM 2020:
+---------------------
++ Spielereihenfolde beim Eintragen beachten
+	+ Bestedritte berechnung folgt nicht der Spielenummerierung
