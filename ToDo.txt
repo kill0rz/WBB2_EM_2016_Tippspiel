@@ -1,6 +1,8 @@
 ToDo für EM 2016:
 -----------------
 
+Vize/Weltmeister-Tipps unter Meine Tipps nicht sichtbar
+
 ToDo für WM 2018:
 -----------------
 + Mehrmaliges Eintragen eines Spiels verhindern (Post-Parameter checken vor der Verarbeitung im ACP gegen leere Felder in DB)
