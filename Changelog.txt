@@ -100,3 +100,8 @@ v1r
 
 + Regression: Link "Meine Tipps" im Header war wieder weg
 + SQL-Datei hinzugefügt um Achtelfinale zu korrigieren
+
+v1s
+---
+
++ Fixed: Vize-/Europameister Tipp in "meine Tipps" wurde nicht angezeigt.

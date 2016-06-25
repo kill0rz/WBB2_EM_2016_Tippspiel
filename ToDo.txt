@@ -1,7 +1,6 @@
 ToDo für EM 2016:
 -----------------
 
-Vize/Weltmeister-Tipps unter Meine Tipps nicht sichtbar
 
 ToDo für WM 2018:
 -----------------
@@ -35,6 +34,7 @@ ToDo für WM 2018:
 	+ Spiel 36 ist nicht das letzte!
 + Beste Dritte rückbauen
 + Spiele können erst eingetragen werden, wenn das Spiel begonnen hat
++ Update der Versionen einfacher machen, aber wie?
 
 ToDo für die EM 2020:
 ---------------------

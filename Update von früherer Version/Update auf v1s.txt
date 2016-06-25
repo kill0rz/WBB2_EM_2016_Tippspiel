@@ -1,0 +1,1 @@
+Das Template /wbb2/templates/em2016_showusertippsdetail.tpl ersetzen.

@@ -922,7 +922,6 @@ if ($action == "showusertippsdetail") {
 					if ($lastgame4emtipp['datetime'] > $akttime) {
 						$emtipp_edit = "&nbsp;<a href=\"em2016.php?action=editemtipp&amp;userid={$wbbuserdata['userid']}{$SID_ARG_2ND}\"><img src=\"images/em2016/edit.gif\" border=\"0\" alt=\"{$lang->items['LANG_EM2016_TPL_SHOWUSERTIPPSDETAIL_14']}\" title=\"{$lang->items['LANG_EM2016_TPL_SHOWUSERTIPPSDETAIL_14']}\" /></a>";
 					}
-
 				} else {
 					if ($akttime > $lastgame4emtipp['datetime']) {
 						$emtipp_name = $allnames2[$ii];
@@ -956,6 +955,7 @@ if ($action == "showusertippsdetail") {
 			}
 		}
 	}
+
 	// Alle Spieltipps auslesen und anzeigen
 	$result_game = $db->query("SELECT ut.*,g.* FROM bb" . $n . "_em2016_usertipps ut LEFT JOIN bb" . $n . "_em2016_spiele g ON ut.gameid=g.gameid WHERE userid = '" . intval($_REQUEST['userid']) . "' ORDER BY g.datetime ASC");
 	while ($row_game = $db->fetch_array($result_game)) {
