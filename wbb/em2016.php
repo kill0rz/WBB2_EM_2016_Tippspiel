@@ -828,7 +828,6 @@ if ($action == "tippabgabe_vem") {
 // ++ Usertipps ansehen +++
 // ++++++++++++++++++++++++
 if ($action == "showusertipps") {
-
 	$result = $db->query("SELECT up.*,uu.username FROM bb" . $n . "_em2016_userpunkte up LEFT JOIN bb" . $n . "_users uu ON up.userid=uu.userid ORDER BY punkte DESC, tipps_gesamt DESC");
 	while ($row = $db->fetch_array($result)) {
 		$rowclass = getone($count++, "tablea", "tableb");
@@ -865,7 +864,9 @@ if ($action == "showusertipps") {
 					}
 				} else {
 					if ($akttime > $lastgame4emtipp['datetime']) {
-						$image_vemtipp = "<img src=\"images/em2016/flaggen/$allflags2[$i]\" border=\"0\" alt=\"$allnames2[$i]\" title=\"$allnames2[$i]\" />";
+						if ($row['tipp_vem'] == $allids2[$i]) {
+							$image_vemtipp = "<img src=\"images/em2016/flaggen/$allflags2[$i]\" border=\"0\" alt=\"$allnames2[$i]\" title=\"$allnames2[$i]\" />";
+						}
 					} else {
 						$image_vemtipp = "<img src=\"images/em2016/flaggen/unknown.png\" border=\"0\" alt=\"{$lang->items['LANG_EM2016_TPL_SHOWUSERTIPPSDETAIL_15']}\" title=\"{$lang->items['LANG_EM2016_TPL_SHOWUSERTIPPSDETAIL_15']}\" />";
 					}

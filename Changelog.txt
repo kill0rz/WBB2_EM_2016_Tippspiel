@@ -105,3 +105,8 @@ v1s
 ---
 
 + Fixed: Vize-/Europameister Tipp in "meine Tipps" wurde nicht angezeigt.
+
+v1t
+---
+
++ Vize-/Europameister Tipp in "User-Tipps" wurde nicht angezeigt.
