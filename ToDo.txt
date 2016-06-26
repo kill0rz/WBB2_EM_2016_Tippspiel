@@ -37,7 +37,12 @@ ToDo für WM 2018:
 + Update der Versionen einfacher machen, aber wie?
 + Ab Achtelfinale keinen Gleichstand mehr tippen können
 	+ Per ACP Steuerbar ob das so gemacht werden soll
-
++ Verschiedene Board-Nummer (>1) unterstützen
+	+ Bei Installation
+		+ Idee: SQL vom Installer generieren lassen
+		+ $n auslesen und dann SQL aus Roh-.sql lesen und per str_replace die Boardnummer setzen
+	+ Bei Updates
+		+ Keine Ahnung, wie das gehen soll, vllt. per php-Datei machen?
 
 
 ToDo für die EM 2020:
