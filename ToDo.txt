@@ -35,6 +35,10 @@ ToDo für WM 2018:
 + Beste Dritte rückbauen
 + Spiele können erst eingetragen werden, wenn das Spiel begonnen hat
 + Update der Versionen einfacher machen, aber wie?
++ Ab Achtelfinale keinen Gleichstand mehr tippen können
+	+ Per ACP Steuerbar ob das so gemacht werden soll
+
+
 
 ToDo für die EM 2020:
 ---------------------
