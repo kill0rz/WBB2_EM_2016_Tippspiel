@@ -834,11 +834,9 @@ if ($action == "showusertipps") {
 		$rowclass = getone($count++, "tablea", "tableb");
 		if ($row['tipp_em'] == 0) {
 			$image_emtipp = "<img src=\"images/em2016/notok.gif\" border=\"0\" alt=\"{$lang->items['LANG_EM2016_PHP_27']}\" title=\"{$lang->items['LANG_EM2016_PHP_27']}\" />";
-		}
-
-		if ($row['tipp_em'] != 0) {
+		} else {
 			for ($i = 0; $i < count($allids2); $i++) {
-				if ($wbbuserdata['userid'] == intval($_REQUEST['userid'])) {
+				if ($wbbuserdata['userid'] == intval($row['userid'])) {
 					if ($akttime > $lastgame4emtipp['datetime']) {
 						if ($row['tipp_em'] == $allids2[$i]) {
 							$image_emtipp = "<img src=\"images/em2016/flaggen/$allflags2[$i]\" border=\"0\" alt=\"$allnames2[$i]\" title=\"$allnames2[$i]\" />";
@@ -846,7 +844,9 @@ if ($action == "showusertipps") {
 					}
 				} else {
 					if ($akttime > $lastgame4emtipp['datetime']) {
-						$image_emtipp = "<img src=\"images/em2016/flaggen/$allflags2[$i]\" border=\"0\" alt=\"$allnames2[$i]\" title=\"$allnames2[$i]\" />";
+						if ($row['tipp_em'] == $allids2[$i]) {
+							$image_emtipp = "<img src=\"images/em2016/flaggen/$allflags2[$i]\" border=\"0\" alt=\"$allnames2[$i]\" title=\"$allnames2[$i]\" />";
+						}
 					} else {
 						$image_emtipp = "<img src=\"images/em2016/flaggen/unknown.png\" border=\"0\" alt=\"{$lang->items['LANG_EM2016_TPL_SHOWUSERTIPPSDETAIL_15']}\" title=\"{$lang->items['LANG_EM2016_TPL_SHOWUSERTIPPSDETAIL_15']}\" />";
 					}
@@ -855,11 +855,9 @@ if ($action == "showusertipps") {
 		}
 		if ($row['tipp_vem'] == 0) {
 			$image_vemtipp = "<img src=\"images/em2016/notok.gif\" border=\"0\" alt=\"{$lang->items['LANG_EM2016_PHP_28']}\" title=\"{$lang->items['LANG_EM2016_PHP_28']}\" />";
-		}
-
-		if ($row['tipp_vem'] != 0) {
+		} else {
 			for ($i = 0; $i < count($allids2); $i++) {
-				if ($wbbuserdata['userid'] == intval($_REQUEST['userid'])) {
+				if ($wbbuserdata['userid'] == intval($row['userid'])) {
 					if ($akttime > $lastgame4emtipp['datetime']) {
 						if ($row['tipp_vem'] == $allids2[$i]) {
 							$image_vemtipp = "<img src=\"images/em2016/flaggen/$allflags2[$i]\" border=\"0\" alt=\"$allnames2[$i]\" title=\"$allnames2[$i]\" />";
@@ -1573,5 +1571,3 @@ if ($action == "emtipp_only") {
 	}
 	eval("\$tpl->output(\"" . $tpl->get("em2016_emtipp_only") . "\");");
 }
-
-?>
