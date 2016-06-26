@@ -1,0 +1,2 @@
+Die Datei /wbb2/em2016.php ersetzen.
+Das Template /wbb2/templates/em2016_showusertipps_bit.tpl ersetzen.
