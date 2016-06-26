@@ -21,10 +21,10 @@
 	<if($em2016_options['winnertipp_jn']==1)>
 		<then>
 			<td class="$rowclass" align="center">
-				<span class="smallfont">$image_wmtipp</span>
+				<span class="smallfont">$image_emtipp</span>
 			</td>
 			<td class="$rowclass" align="center">
-				<span class="smallfont">$image_vwmtipp</span>
+				<span class="smallfont">$image_vemtipp</span>
 			</td>
 		</then>
 	</if>
