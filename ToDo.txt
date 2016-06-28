@@ -44,7 +44,8 @@ ToDo für WM 2018:
 		+ $n auslesen und dann SQL aus Roh-.sql lesen und per str_replace die Boardnummer setzen
 	+ Bei Updates
 		+ Keine Ahnung, wie das gehen soll, vllt. per php-Datei machen?
-
++ action: showusertippsdetail
+	+ Link hinter SpielNr zu ?action=tippsprogame&gameid=
 
 ToDo für die EM 2020:
 ---------------------
