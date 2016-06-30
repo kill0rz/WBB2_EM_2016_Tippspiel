@@ -34,7 +34,7 @@ ToDo für WM 2018:
 + Spielereihenfolde beim Eintragen beachten
 	+ Spiel 36 ist nicht das letzte!
 + Beste Dritte rückbauen
-+ Spiele können erst eingetragen werden, wenn das Spiel begonnen hat
++ Spiele können erst eingetragen werden, wenn das Spiel begonnen hat/vorbei ist
 + Update der Versionen einfacher machen, aber wie?
 + Ab Achtelfinale keinen Gleichstand mehr tippen können
 	+ Per ACP Steuerbar ob das so gemacht werden soll
