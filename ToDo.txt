@@ -47,6 +47,7 @@ ToDo für WM 2018:
 + action: showusertippsdetail
 	+ Link hinter SpielNr zu ?action=tippsprogame&gameid=
 + gelöschte user handeln
++ Umlaute in Teamnamen besser handeln; irgendwo im Text waren 3x replacer drin, die müssen wieder weg
 
 ToDo für die EM 2020:
 ---------------------
