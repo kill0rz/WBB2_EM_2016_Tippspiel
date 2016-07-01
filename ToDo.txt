@@ -46,7 +46,8 @@ ToDo für WM 2018:
 		+ Keine Ahnung, wie das gehen soll, vllt. per php-Datei machen?
 + action: showusertippsdetail
 	+ Link hinter SpielNr zu ?action=tippsprogame&gameid=
-+ gelöschte user handeln
++ gelöschte User handeln (Mod fest einbauen; Mod entfernen)
+	+ Nur während des Tippspiels, danach kann es nachträglich Statistiken verfälschen
 + Umlaute in Teamnamen besser handeln; irgendwo im Text waren 3x replacer drin, die müssen wieder weg
 
 ToDo für die EM 2020:
