@@ -39,6 +39,7 @@ ToDo für WM 2018:
 + Update der Versionen einfacher machen, aber wie?
 + Ab Achtelfinale keinen Gleichstand mehr tippen können
 	+ Per ACP Steuerbar ob das so gemacht werden soll
+	+ (nur) dann auch das Eintragen verhindern
 + Verschiedene Board-Nummer (>1) unterstützen
 	+ Bei Installation
 		+ Idee: SQL vom Installer generieren lassen
@@ -50,6 +51,12 @@ ToDo für WM 2018:
 + gelöschte User handeln (Mod fest einbauen; Mod entfernen)
 	+ Nur während des Tippspiels, danach kann es nachträglich Statistiken verfälschen
 + Umlaute in Teamnamen besser handeln; irgendwo im Text waren 3x replacer drin, die müssen wieder weg
++ action gamedetails
+	+ Linktext schöner machen
+	+ Forenfunktion nutzen zum shrinken
++ ACP > eintragen
+	+ Lik zum Spiel (Forum, neuer Tab) hinter die ID
+
 
 ToDo für die EM 2020:
 ---------------------
