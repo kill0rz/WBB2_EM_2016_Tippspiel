@@ -56,6 +56,10 @@ ToDo für WM 2018:
 	+ Forenfunktion nutzen zum shrinken
 + ACP > eintragen
 	+ Lik zum Spiel (Forum, neuer Tab) hinter die ID
++ action: showresults
+	+ Ab Achtelfinale soll man direkt zum Tab des jeweiligen Spiels geleitet werden, nicht immer zur Vorrunde
++ Kriritische Spielenummern auslagern
+	+ z.B.: 36 = Vorrundenende usw.
 
 
 ToDo für die EM 2020:
