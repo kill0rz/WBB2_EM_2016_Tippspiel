@@ -58,7 +58,7 @@ ToDo für WM 2018:
 	+ Lik zum Spiel (Forum, neuer Tab) hinter die ID
 + action: showresults
 	+ Ab Achtelfinale soll man direkt zum Tab des jeweiligen Spiels geleitet werden, nicht immer zur Vorrunde
-+ Kriritische Spielenummern auslagern
++ Kriritische Spielenummern in Variablen auslagern
 	+ z.B.: 36 = Vorrundenende usw.
 
 
