@@ -60,6 +60,7 @@ ToDo für WM 2018:
 	+ Ab Achtelfinale soll man direkt zum Tab des jeweiligen Spiels geleitet werden, nicht immer zur Vorrunde
 + Kriritische Spielenummern in Variablen auslagern
 	+ z.B.: 36 = Vorrundenende usw.
++ mal grundsätzlich den Quelltext kommentieren
 
 
 ToDo für die EM 2020:
