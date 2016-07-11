@@ -63,6 +63,17 @@ ToDo für WM 2018:
 + mal grundsätzlich den Quelltext kommentieren
 
 
+
+USERWÜNSCHE
+-----------
+
+- Tipp für Verlängerung und Elfmeterschießen einbauen (wobei Elfmeter im Grunde schon existiert)
+- Jeder Spieler bekommt eine Anzahl Joker, zum Verdoppeln der Punkte
+- Wenn man bei Tippabgabe Felder vergessen hat, nur die Felder anmeckern, die vergessen wurde. Im Moment muss man alles neu eintragen.
+- Korrekturmöglichkeit, falls man Ergebnisse falsch eingetragen hat.
+- Punkte für korrektes Torverhältnis (z.B. Wer bei 1:0 ein 2:1 oder 3:2 getippt hat, bekommt mehr Punkte als jemand der 5:0 getippt hat.)
+
+
 ToDo für die EM 2020:
 ---------------------
 + Spielereihenfolde beim Eintragen beachten
